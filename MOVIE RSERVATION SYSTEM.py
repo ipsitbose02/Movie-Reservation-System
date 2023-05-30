@@ -1,5 +1,6 @@
 import mysql.connector as sql
-conn=sql.connect(host = 'localhost',user='root',passwd='roop',database='movie')
+password=input("Enter password of your database:")
+conn=sql.connect(host = 'localhost',user='root',passwd=password,database='movie')
 c1=conn.cursor()
 if conn.is_connected():
     print("Successfully Connected......")
